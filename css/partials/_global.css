@@ -1,0 +1,50 @@
+/* Font Family */
+@import url(../fonts.css);
+
+/* Variables */
+:root {
+  --primary-color: #eee;
+  --secondary-color: #1b262c;
+  --line-color: rgb(255, 102, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: url("../../img/bg.jpg") fixed;
+  background-size: cover;
+  position: relative;
+  font-family: Josefin Sans;
+  font-size: 10px;
+  user-select: none;
+  color: var(--primary-color);
+}
+
+section {
+  padding: 6rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+p {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  width: 100%;
+}
