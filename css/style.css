@@ -8,66 +8,66 @@
 @import url(./partials/_media.css);
 
 /*Start header*/
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background-color 0.5s ease;
+  z-index: 1000;
+}
+
 .logo {
-  font-size: 5rem;
-  font-weight: 100;
-  letter-spacing: 3.5px;
+  text-decoration: none;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  color: var(--secondary-color);
+  font-weight: bold;
+  transform: rotate(-15deg);
 }
 
 .logo:hover {
-  text-shadow: 0 0 20px var(--primary-color);
+  transform: rotate(0deg);
+  transition: 300ms transform ease-in-out;
 }
 
-.logo span {
-  font-weight: bold;
-  color: var(--line-color);
-}
-
-nav,
-.nav-links {
-  height: 10vh;
+.nav {
+  height: 8rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  transition: height 0.5s ease;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
   text-transform: uppercase;
-  font-size: 2rem;
 }
 
-.nav-links {
-  margin-top: 1rem;
-}
-
-.nav-links li a {
-  padding: 1rem 0;
-  margin: 0 1.5rem;
+.nav-link {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-left: 5rem;
   position: relative;
-  letter-spacing: 2.5px;
 }
 
-.nav-links li a::before,
-.nav-links li a::after {
-  content: "";
-  position: absolute;
+.nav-link::after {
+  content: '';
   width: 100%;
   height: 2px;
-  background-color: var(--line-color);
-  left: 0;
+  background-color: var(--secondary-color);
+  position: absolute;
+  left: -2px;
+  bottom: -5px;
   transform: scaleX(0);
-  transition: all 0.3s;
-}
-
-.nav-links li a::before {
-  top: 0;
   transform-origin: left;
+  transition: transform 0.5s ease;
 }
 
-.nav-links li a::after {
-  bottom: 0;
-  transform-origin: right;
-}
-
-.nav-links li a:hover::before,
-.nav-links li a:hover::after {
+.nav-link:hover::after {
   transform: scaleX(1);
 }
 
@@ -84,25 +84,38 @@ nav,
   transition: all 0.4s ease;
 }
 
+.scrolling-active {
+  background-color: var(--secondary-color);
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.1);
+}
+
+.scrolling-active .nav {
+  height: 6.5rem;
+}
+
+.scrolling-active .burger div {
+  background-color: var(--support-color-two);
+}
+
+.scrolling-active .nav a {
+  color: var(--support-color);
+}
+
+.scrolling-active .nav-link::after {
+  background-color: var(--primary-color);
+}
+
 .landing {
-  height: 90vh;
   width: 100%;
-  position: absolute;
-  top: 30%;
+  position: relative;
+  top: 20%;
+  border-left: 3.5px solid var(--secondary-color);
 }
 
 .landing h1,
 .landing h3 {
   font-size: 4rem;
   font-weight: 300;
-}
-
-.landing h1::after {
-  content: "";
-  height: 2px;
-  width: 55%;
-  background-color: var(--line-color);
-  display: inline-block;
   margin-left: 2rem;
 }
 
@@ -110,37 +123,32 @@ nav,
   font-size: 12rem;
   letter-spacing: 1rem;
   padding-top: 2rem;
+  margin-left: 1rem;
 }
 
-.landing h3::before {
-  content: "";
-  height: 2px;
-  width: 30%;
-  background-color: var(--line-color);
-  display: inline-block;
-  margin-right: 2rem;
-  /* margin-bottom: 5rem; */
+.quote {
+  position: relative;
+  top: 37%;
+  font-size: 2.5rem;
+  text-align: center;
 }
 /*End header*/
 
 /*Start about*/
 .about .container {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .profile-img {
-  width: 40%;
-  margin-bottom: 10rem;
+  width: 200%;
 }
 
 .about-heading {
   text-align: center;
   text-transform: uppercase;
   line-height: 0;
-  margin-bottom: 5rem;
+  margin: 6rem 0;
 }
 
 .about-heading h1 {
@@ -150,6 +158,7 @@ nav,
 
 .about-heading h6 {
   font-size: 3rem;
+  transform: translateY(-5px);
   font-weight: 300;
 }
 /*End about*/
@@ -242,8 +251,8 @@ nav,
 }
 
 .timeline .date::after {
-  content: "";
-  box-shadow: 0 0 0 3px var(--line-color);
+  content: '';
+  box-shadow: 0 0 0 3px var(--secondary-color);
   border-radius: 100%;
   left: -5.9rem;
   height: 1.5rem;
@@ -267,7 +276,7 @@ nav,
 .copy {
   width: 100%;
   text-align: center;
-  background-color: var(--secondary-color);
+  background-color: var(--support-color);
   padding: 2rem 0;
   position: relative;
 }
@@ -322,7 +331,7 @@ nav,
 }
 
 .up i {
-  color: var(--secondary-color);
+  color: var(--support-color);
   font-size: 2rem;
   margin: auto;
 }
@@ -376,74 +385,65 @@ nav,
   }
 
   .landing h2 {
-    font-size: 6rem;
-  }
-
-  .landing h1::after {
-    width: 25vw;
-  }
-
-  .landing h3::before {
-    width: 7vw;
+    font-size: 10rem;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .logo {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .section-heading h1 {
-    font-size: 4rem;
+    font-size: 5rem;
   }
 
   .burger {
     display: block;
-    z-index: 2;
+    z-index: 2000;
   }
 
-  .nav-links {
+  .nav-list {
+    background: var(--support-color);
     position: absolute;
-    right: 50px;
-    width: 50%;
-    height: 65vh;
-    top: 1.5vh;
-    background-color: var(--secondary-color);
+    width: 100%;
+    height: 500px;
+    transform: translate(160%, 60%);
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    transform: translateY(-150%);
-    transition: transform 0.3s ease-in;
-    z-index: 1;
+    transition: transform 0.3s ease-in-out;
   }
 
-  .nav-links li,
-  .nav-links button {
-    margin: 3rem;
+  .nav-link {
+    margin: 0;
+  }
+
+  .scrolling-active .nav-link {
+    color: var(--primary-color) !important;
   }
 
   .nav-active {
-    transform: translateY(0%);
+    transform: translate(0, 60%);
   }
 
   .landing h1,
   .landing h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   .landing h2 {
-    font-size: 7rem;
+    font-size: 9rem;
   }
 
-  .landing h1::after {
-    width: 45vw;
-  }
-
-  .landing h3::before {
-    width: 25vw;
+  .about .container {
+    flex-direction: column;
+    text-align: center;
   }
 
   .profile-img {
+    width: 50%;
     margin-bottom: 8rem;
   }
 
@@ -472,7 +472,7 @@ nav,
   }
 
   .timeline ul {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 15rem;
   }
 
   .timeline .date::before {
@@ -489,38 +489,64 @@ nav,
   }
 }
 
-@media screen and (max-width: 425px) {
-  nav {
-    margin-left: 2rem !important;
-    margin-right: 2rem !important;
+@media (max-width: 768px) {
+  .landing h2 {
+    font-size: 8rem;
   }
 
-  .nav-links {
-    right: 20px;
-    width: 90%;
-    height: 70%;
-    font-size: 1.5rem;
+  .landing h1,
+  .landing h3 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .landing h2 {
+    font-size: 7rem;
+  }
+
+  .landing h1,
+  .landing h3 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .landing h2 {
+    font-size: 6rem;
   }
 
   .landing h1,
   .landing h3 {
     font-size: 2rem;
   }
+}
 
+@media (max-width: 545px) {
+  .landing h2 {
+    font-size: 5.5rem;
+  }
+
+  .timeline ul {
+    margin: 0 0 0 12rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .landing h2 {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .landing h1,
   .landing h3 {
-    margin-top: 1rem;
+    font-size: 2rem;
   }
 
   .landing h2 {
     font-size: 4rem;
-  }
-
-  .landing h1::after {
-    width: 50vw;
-  }
-
-  .landing h3::before {
-    width: 20vw;
+    margin: 0 0 1.5rem 1.5rem;
   }
 
   .about .container {
@@ -559,5 +585,17 @@ nav,
 
   .up {
     right: 3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .landing h1,
+  .landing h3 {
+    font-size: 1.8rem;
+  }
+
+  .landing h2 {
+    font-size: 3rem;
+    margin: 0 0 1.5rem 1.5rem;
   }
 }

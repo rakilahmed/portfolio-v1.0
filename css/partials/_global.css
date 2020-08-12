@@ -4,8 +4,9 @@
 /* Variables */
 :root {
   --primary-color: #eee;
-  --secondary-color: #1b262c;
-  --line-color: rgb(255, 102, 0);
+  --secondary-color: #dfaf2b;
+  --support-color: #333042;
+  --support-color-two: #181621;
 }
 
 * {
@@ -18,13 +19,16 @@ html,
 body {
   width: 100%;
   height: 100%;
-  background: url("../../img/bg.jpg") fixed;
-  background-size: cover;
-  position: relative;
+  background-color: var(--support-color-two);
   font-family: Josefin Sans;
   font-size: 10px;
   user-select: none;
   color: var(--primary-color);
+  scroll-behavior: smooth;
+}
+
+.noscroll {
+  overflow: hidden;
 }
 
 section {

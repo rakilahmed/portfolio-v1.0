@@ -22,7 +22,7 @@
 
 .section-heading h1::before,
 .section-heading h1::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -0.5rem;
   left: 50%;
@@ -32,7 +32,7 @@
 .section-heading h1::before {
   width: 15rem;
   height: 2px;
-  background-color: var(--line-color);
+  background-color: var(--secondary-color);
 }
 
 .section-heading h1::after {
@@ -53,25 +53,30 @@
   margin-right: 2.5rem;
 }
 
+.has-margin-left {
+  margin-left: 2rem;
+}
+
 .cta {
   background: none;
   font-size: 2rem;
   text-transform: uppercase;
   color: var(--primary-color);
-  border: 2px solid var(--line-color);
+  border: 2px solid var(--secondary-color);
   padding: 10px 20px;
   letter-spacing: 2.5px;
 }
 
 .about-details a:hover,
 .landing span:hover,
+.work-description a:hover,
 .timeline a:hover {
-  color: var(--line-color);
+  color: var(--secondary-color);
   transition: color 0.4s linear;
 }
 
 button {
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .cta:hover,
