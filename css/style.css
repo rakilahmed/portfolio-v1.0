@@ -262,9 +262,13 @@ header {
 /*End timeline*/
 
 /*Start contact*/
-.hand {
+.hand img {
   margin-top: 3rem;
-  font-size: 7rem;
+  width: 100px;
+}
+
+.hand img:hover {
+  transform: rotate(50deg);
 }
 
 .contact a {
