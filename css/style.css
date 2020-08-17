@@ -265,10 +265,7 @@ header {
 .hand img {
   margin-top: 3rem;
   width: 100px;
-}
-
-.hand img:hover {
-  transform: rotate(50deg);
+  animation: hand 2s infinite;
 }
 
 .contact a {
@@ -354,14 +351,15 @@ header {
   }
 }
 
-@keyframes linksIn {
-  from {
-    opacity: 0;
-    transform: translateY(25px);
+@keyframes hand {
+  0% {
+    transform: rotate(0deg);
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  50% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
