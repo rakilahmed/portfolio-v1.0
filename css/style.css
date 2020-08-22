@@ -1,11 +1,8 @@
 /* Global Style */
-@import url(./partials/_global.css);
+@import url(./partials/_global.min.css);
 
 /* Reusable Style */
-@import url(./partials/_reusable.css);
-
-/* Device Style */
-@import url(./partials/_media.css);
+@import url(./partials/_reusable.min.css);
 
 /*Start header*/
 header {
