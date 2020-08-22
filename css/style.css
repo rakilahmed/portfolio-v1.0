@@ -1,8 +1,8 @@
 /* Global Style */
-@import url(./partials/_global.min.css);
+@import url(./partials/_global.css);
 
 /* Reusable Style */
-@import url(./partials/_reusable.min.css);
+@import url(./partials/_reusable.css);
 
 /*Start header*/
 header {
@@ -162,7 +162,7 @@ header {
 
 /*Start work*/
 .work-img img {
-  width: 100%;
+  width: 50rem;
 }
 
 .work-item {
@@ -462,6 +462,10 @@ header {
   .work-img img {
     margin: 0 0 2rem 0;
     order: 1;
+  }
+
+  .work-img img {
+    width: 90vw;
   }
 
   .work-description {
