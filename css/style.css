@@ -57,7 +57,7 @@ header {
   height: 2px;
   background-color: var(--secondary-color);
   position: absolute;
-  left: -2px;
+  left: 0;
   bottom: -5px;
   transform: scaleX(0);
   transform-origin: left;
@@ -575,7 +575,7 @@ header {
   }
 
   .profile-img {
-    margin: 0 auto;
+    margin: 2rem auto;
   }
 
   .timeline p {
