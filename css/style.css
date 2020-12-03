@@ -288,7 +288,7 @@ header {
   margin-top: 2rem;
 }
 
-.social-media i {
+.social-media em {
   font-size: 4rem;
   padding: 7px;
   transition: color 650ms;
@@ -328,7 +328,7 @@ header {
   cursor: pointer;
 }
 
-.up i {
+.up em {
   color: var(--support-color);
   font-size: 2rem;
   margin: auto;
