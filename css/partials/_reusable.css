@@ -66,11 +66,12 @@
   padding: 10px 20px;
   letter-spacing: 2.5px;
 }
-
+.landing button a:hover,
 .about-details a:hover,
 .landing span:hover,
 .work-description a:hover,
-.timeline a:hover {
+.timeline a:hover,
+.contact button a:hover {
   color: var(--secondary-color);
   transition: color 0.4s linear;
 }
