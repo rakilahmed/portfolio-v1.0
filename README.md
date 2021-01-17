@@ -1,3 +1,3 @@
-# Site_V1
+# Personal Site v1.0
 
-https://rakilahmed.net
+https://rakilahmed.com
