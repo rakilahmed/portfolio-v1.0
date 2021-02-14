@@ -25,7 +25,7 @@ header {
 
 .logo:hover {
   transform: rotate(0deg);
-  transition: 300ms transform ease-in-out;
+  transition: 300ms transform ease-out;
 }
 
 .nav {
