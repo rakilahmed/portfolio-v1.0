@@ -20,12 +20,11 @@ header {
   letter-spacing: 3px;
   color: var(--secondary-color);
   font-weight: bold;
-  transform: rotate(-15deg);
 }
 
 .logo:hover {
-  transform: rotate(0deg);
-  transition: 300ms transform ease-out;
+  transform: scale(1.1);
+  transition: 300ms transform ease-in-out;
 }
 
 .nav {
