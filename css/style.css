@@ -102,9 +102,7 @@ header {
 }
 
 .landing {
-  width: 100%;
-  position: relative;
-  top: 20%;
+  margin-top: 20%;
   border-left: 3.5px solid var(--secondary-color);
 }
 
@@ -123,8 +121,7 @@ header {
 }
 
 .quote {
-  position: relative;
-  top: 37%;
+  margin-top: 12%;
   font-size: 2.5rem;
   text-align: center;
 }
@@ -259,13 +256,9 @@ header {
 
 /*Start contact*/
 .hand img {
-  margin-top: 3rem;
+  margin: 5rem 0;
   width: 100px;
   animation: hand 2s infinite;
-}
-
-.contact a {
-  margin-top: 5rem;
 }
 /*End contact*/
 
@@ -600,5 +593,9 @@ header {
   .landing h2 {
     font-size: 3rem;
     margin: 0 0 1.5rem 1.5rem;
+  }
+
+  .work-item .has-margin-right {
+    margin-right: 1rem;
   }
 }

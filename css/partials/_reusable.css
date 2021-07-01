@@ -8,7 +8,7 @@
 
 .section-heading {
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .section-heading h1 {
@@ -50,11 +50,15 @@
 }
 
 .has-margin-right {
-  margin-right: 2.5rem;
+  margin-right: 2rem;
 }
 
 .has-margin-left {
   margin-left: 2rem;
+}
+
+.has-margin-top {
+  margin-top: 2rem;
 }
 
 .cta {
@@ -66,23 +70,19 @@
   padding: 10px 20px;
   letter-spacing: 2.5px;
 }
-.landing button a:hover,
+
 .about-details a:hover,
 .landing span:hover,
 .work-description a:hover,
-.timeline a:hover,
-.contact button a:hover {
+.timeline a:hover {
   color: var(--secondary-color);
   transition: color 0.4s linear;
 }
 
-button {
-  margin-top: 3rem;
-}
-
-.cta:hover,
-button:hover {
-  box-shadow: 0 0 20px var(--primary-color);
+.cta:hover {
+  border-color: var(--primary-color);
+  color: var(--secondary-color);
+  transition: color 0.4s linear;
 }
 
 .span-border-line {
